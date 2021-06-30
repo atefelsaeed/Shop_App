@@ -2,8 +2,6 @@ import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop_app_abdalla/layout/shop_layout.dart';
-import 'package:shop_app_abdalla/modules/login/cubit/cubit.dart';
-import 'package:shop_app_abdalla/modules/login/cubit/states.dart';
 import 'package:shop_app_abdalla/modules/register/cubit/cubit.dart';
 import 'package:shop_app_abdalla/modules/register/cubit/states.dart';
 import 'package:shop_app_abdalla/shared/components/components.dart';
@@ -111,12 +109,12 @@ class ShopRegisterScreen extends StatelessWidget {
                           isPassword: ShopRegisterCubit.get(context).isPassword,
                           suffix: ShopRegisterCubit.get(context).suffix,
                           onSubmit: (value) {
-                            if (formKey.currentState.validate()) {
-                              ShopRegisterCubit.get(context).userRegister(
-                                email: emailController.text,
-                                password: passwordController.text,
-                              );
-                            }
+                            // if (formKey.currentState.validate()) {
+                            //   ShopRegisterCubit.get(context).userRegister(
+                            //     email: emailController.text,
+                            //     password: passwordController.text,
+                            //   );
+                            // }
                           },
                           suffixPressed: () {
                             ShopRegisterCubit.get(context)
